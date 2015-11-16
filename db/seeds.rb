@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+index = 0
+while index < 25 
+	Project.create name: "IronHack #{index}" 
+	index = index + 1
+end
