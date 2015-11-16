@@ -1,9 +1,9 @@
 class SiteController < ApplicationController
 	def home
-		render 'home'
+		#render 'home'
 	end
 
 	def contact
-		render 'contact'
+		#render 'contact'
 	end
 end
