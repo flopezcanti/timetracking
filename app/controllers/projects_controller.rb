@@ -5,8 +5,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find_by(id: params[:id])
-    render_404(params)
+    @project = Project.find_by(id: params[:id]) || render_404(params)
   end
 
 end
