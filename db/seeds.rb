@@ -10,6 +10,6 @@
 
 index = 0
 while index < 25 
-	Project.create name: "IronHack #{index}" 
+	Project.create name: "IronHack #{index}" , description: "Project #{index} description"
 	index = index + 1
 end
