@@ -2,7 +2,11 @@
  <ul>
  	<% @entries.each do |entry| %>
  	<li>
+
  		<%= entry.hours %>h <%= entry.minutes%>m - <%= entry.date %>
+
+ 		<%= link_to('New Entry', new_project_entry_path) %> 
+ 		<%= link_to('Home', projects_path) %> 
  		
  	</li>
  	<% end %>

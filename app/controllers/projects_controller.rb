@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
 		if @projects.empty?
 			render template: 'no_projects_found' #podría ser 'admin/no_projects_found'
 		end
-		@total_hours = @projects.total_hours_in_month(Date.current.month, Date.current.year)
+		#@total_hours = @projects.total_hours_in_month(Date.current.month, Date.current.year)
   end
 
   def show

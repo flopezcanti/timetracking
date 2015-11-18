@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     # SI QUIERO ESPECIFICAR 
     # 
     
-    resources :project, only: [:index, :show, :new, :create] do
+    resources :projects, only: [:index, :show, :new, :create] do
       resources :entries, only: [:index, :new, :create]
     end
 
