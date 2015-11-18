@@ -11,6 +11,22 @@ class EntriesController < ApplicationController
 		@entry = @project.entries.new
 	end
 
+	def edit
+		@project = Project.find(params[:project_id])
+		@entry = @project.entries.find(params[:id])
+	end
+
+	def update
+		@entry = Entry.find(params[:id])
+		if @entry.update_attributes entry_params
+			flash[:notice] = "Entry updated successfully"
+			redirect_to action: 'index'
+		else
+			flash.now[:errors] = @entry.errors.full_messages
+			render 'edit'
+		end
+	end
+
 	def create
 		#find the project using params[:project_id]
 		@project = Project.find(params[:project_id])

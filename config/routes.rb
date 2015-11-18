@@ -12,8 +12,8 @@ Rails.application.routes.draw do
     # SI QUIERO ESPECIFICAR 
     # 
     
-    resources :projects, only: [:index, :show, :new, :create] do
-      resources :entries, only: [:index, :new, :create]
+    resources :projects, only: [:index, :show] do
+      resources :entries, only: [:index, :new, :create, :edit, :update]
     end
 
 
