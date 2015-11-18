@@ -34,7 +34,6 @@ class Project < ActiveRecord::Base
 			sum + entry.minutes + entry.hours * 60
 		end
 
-		total_hours = total_minutes / 60
-		#total_hours = month_entries.sum(&:hours)
+		@total_hours = total_minutes / 60
 	end
 end
