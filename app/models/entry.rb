@@ -5,5 +5,4 @@ class Entry < ActiveRecord::Base
 	validates :project_id, presence: true
 
 	belongs_to :project
-
 end
