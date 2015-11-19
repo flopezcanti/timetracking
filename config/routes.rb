@@ -9,11 +9,11 @@ Rails.application.routes.draw do
     #   resources :entries
     # end
     # 
-    # SI QUIERO ESPECIFICAR 
+    # SI QUIERO ESPECIFICAR:
     # 
     
     resources :projects, only: [:index, :show] do
-      resources :entries, only: [:index, :new, :create, :edit, :update]
+      resources :entries, only: [:index, :new, :create, :edit, :update, :destroy]
     end
 
 
